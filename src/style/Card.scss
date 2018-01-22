@@ -1,0 +1,56 @@
+.Card {
+  /* layout */
+  height: 80px;
+  margin-top: 15px;
+  padding: 15px;
+  overflow: hidden;
+  position: relative;
+  line-height: 1;
+  /* style */
+  background-color: #56B6EB;
+  color: #ffffff;
+  .card-avatar{
+    /* layout */
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* style */
+    background-color: aqua;
+  }
+  .card-contents{
+    float: left;
+    margin-left: 15px;
+    li{
+      line-height: 1;
+    }
+    .card-title{
+      /* layout */
+      font-size: 17px;
+      margin-top: 5px;
+      /* width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; */
+
+      /* style */
+    }
+    .card-location{
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .card-notification{
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  }
+  .card-lasttime{
+    /* layout */
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 10px;
+    /* style */
+  }
+
+}

@@ -1,14 +1,14 @@
 import React,{Component} from 'react';
-import './Card.css';
+import '../style/Card.css';
 
 
 class Card extends React.Component {
   constructor(props){
     super();
     this.state={
-
     };
-    this.data={"title":"default title",
+    this.data={
+      "title":"default title",
       "location":"default location",
       "notification":"default notification",
       "lasttime":"default lasttime",
