@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Card from './Card';
 import '../style/Cards.css';
+import headicon from'../assets/avatar01.png';
 
 
 class Cards extends React.Component {
