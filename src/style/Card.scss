@@ -1,7 +1,7 @@
 .Card {
   /* layout */
-  height: 80px;
-  margin-top: 15px;
+  height: 100px;
+  margin-top: 8px;
   padding: 15px;
   overflow: hidden;
   position: relative;
@@ -9,13 +9,18 @@
   /* style */
   background-color: #56B6EB;
   color: #ffffff;
+  border-radius: 6px;
   .card-avatar{
     /* layout */
     float: left;
     width: 50px;
     height: 50px;
     /* style */
-    background-color: aqua;
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
   }
   .card-contents{
     float: left;
@@ -27,27 +32,43 @@
       /* layout */
       font-size: 17px;
       margin-top: 5px;
-      /* width: 200px;
+      width: 170px;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis; */
+      text-overflow: ellipsis;
 
       /* style */
     }
     .card-location{
       font-size: 13px;
       margin-top: 5px;
+      width: 170px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-notification{
+      position: relative;
       font-size: 13px;
       margin-top: 10px;
+      color: #dff2ff;
+      padding-left: 20px;
+      &::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background-image: url(./../assets/icon/pushon.png);
+      }
     }
   }
   .card-lasttime{
     /* layout */
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 10px;
     font-size: 10px;
     /* style */

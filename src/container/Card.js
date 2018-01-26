@@ -1,32 +1,34 @@
 import React,{Component} from 'react';
 import '../style/Card.css';
-
+import avatar from './../assets/avatar02.png'
 
 class Card extends React.Component {
   constructor(props){
     super();
+    this.data={
+      title:"薄い財布",
+      location:"東京都千代田区外神田１丁目付近",
+      notification:"通知オン",
+      lasttime:"１時間前",
+      avatar:avatar
+    };
     this.state={
     };
-    this.data={
-      "title":"default title",
-      "location":"default location",
-      "notification":"default notification",
-      "lasttime":"default lasttime",
-      "image":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
-      }
   }
   handleClick(){
-    debugger
+
     this.setState({
       title:"state changed!"
     });
   }
 
   render() {
+    console.log(this.data.avatar);
+    // debugger
     return (
       <div className="Card">
         <div className="card-avatar">
-          <img src={this.data.image}/>
+          <img src={this.data.avatar} alt=""/>
         </div>
         <ul className="card-contents">
           <li className="card-title">{this.data.title}</li>
