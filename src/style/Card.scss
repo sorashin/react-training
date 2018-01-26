@@ -10,7 +10,7 @@
   background-color: #56B6EB;
   color: #ffffff;
   border-radius: 6px;
-  .card-avatar{
+  .avatar{
     /* layout */
     float: left;
     width: 50px;
@@ -22,13 +22,13 @@
       border-radius: 50px;
     }
   }
-  .card-contents{
+  .contents{
     float: left;
     margin-left: 15px;
     li{
       line-height: 1;
     }
-    .card-title{
+    .cardTitle{
       /* layout */
       font-size: 17px;
       margin-top: 5px;
@@ -39,7 +39,7 @@
 
       /* style */
     }
-    .card-location{
+    .cardLocation{
       font-size: 13px;
       margin-top: 5px;
       width: 170px;
@@ -48,7 +48,7 @@
       text-overflow: ellipsis;
     }
 
-    .card-notification{
+    .cardNotification{
       position: relative;
       font-size: 13px;
       margin-top: 10px;
@@ -65,7 +65,7 @@
       }
     }
   }
-  .card-lasttime{
+  .cardLasttime{
     /* layout */
     position: absolute;
     right: 15px;

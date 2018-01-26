@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './../style/Board.css';
+import styles from './../style/Board.css';
 import Cards from './Cards';
 
 
@@ -12,9 +12,11 @@ class Board extends Component {
       cardsList.push(<Cards/>);
     }
     return (
-        <ul className="Board">
-          {cardsList}
-        </ul>
+        <div className={styles.Board}>
+          <ul className={styles.wrap}>
+            {cardsList}
+          </ul>
+        </div>
     );
   }
 }

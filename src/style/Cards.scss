@@ -1,29 +1,31 @@
 .Cards {
   // layout
   width:330px;
-  overflow: hidden;
-  float: left;
+  height: 100%;
+  overflow: auto;
+  display:inline-block;
   // style
   text-align: left;
   background-color: #F0F3F5;
   margin-left: 30px;
-  .cards-head{
+  border-radius: 6px;
+  .head{
     overflow: auto;
     padding: 15px;
 
-    .cards-head-icon{
+    .headIcon{
       width: 56px;
       height: 56px;
       float: left;
     }
-    .cards-head-title{
+    .headTitle{
       margin-left: 15px;
       font-size: 18px;
       color: #515C63;
       float: left;
       line-height: 56px;
     }
-    .cards-head-option{
+    .headOption{
       line-height: 56px;
       &::after{
         content: "";
@@ -36,9 +38,10 @@
       }
     }
   }
-  .cards-wrap{
+  .wrap{
     margin: 0 auto;
+    height: 100%;
     width: 300px;
-    overflow: auto;
+    overflow-y: scroll;
   }
 }

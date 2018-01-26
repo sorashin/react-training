@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import Card from './Card';
-import '../style/Cards.css';
-import headicon from'../assets/gateway_thumb.png';
+import styles from './../style/Cards.css';
+import headicon from'./../assets/gateway_thumb.png';
 
 
 class Cards extends React.Component {
@@ -9,10 +9,6 @@ class Cards extends React.Component {
     super();
     this.state={
 
-    };
-    this.data={
-      title:"101号室",
-      headicon:headicon
     };
   }
   handleClick(){
@@ -22,6 +18,10 @@ class Cards extends React.Component {
     });
   }
   render() {
+    this.props={
+      title:"101号室",
+      headicon:headicon
+    };
     var cardList = [];
     var cardData = [0,1,2,3,4,5,6]
     for(var i in cardData){
@@ -29,13 +29,13 @@ class Cards extends React.Component {
     }
 
     return (
-      <li className="Cards">
-        <div className="cards-head">
-          <div className="cards-head-icon"><img src={this.data.headicon}/></div>
-          <h1 className="cards-head-title">{this.data.title}</h1>
-          <p className="cards-head-option"></p>
+      <li className={styles.Cards}>
+        <div className={styles.head}>
+          <div className={styles.headIcon}><img src={this.props.headicon}/></div>
+          <h1 className={styles.headTitle}>{this.props.title}</h1>
+          <p className={styles.headOption}></p>
         </div>
-        <ul className="cards-wrap">
+        <ul className={styles.wrap}>
           {cardList}
         </ul>
       </li>

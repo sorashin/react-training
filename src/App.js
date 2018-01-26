@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './style/App.css';
+import styles from './style/App.css';
 import Board from './container/Board';
-
+import logo from './logo.svg';
 
 
 
@@ -10,7 +9,7 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div className={styles.App}>
         <Board/>
       </div>
     );

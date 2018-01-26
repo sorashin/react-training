@@ -1,17 +1,10 @@
 import React,{Component} from 'react';
-import '../style/Card.css';
+import styles from './../style/Card.css';
 import avatar from './../assets/avatar02.png'
 
 class Card extends React.Component {
   constructor(props){
     super();
-    this.data={
-      title:"薄い財布",
-      location:"東京都千代田区外神田１丁目付近",
-      notification:"通知オン",
-      lasttime:"１時間前",
-      avatar:avatar
-    };
     this.state={
     };
   }
@@ -23,19 +16,26 @@ class Card extends React.Component {
   }
 
   render() {
-    console.log(this.data.avatar);
+    this.props={
+      title:"薄い財布",
+      location:"東京都千代田区外神田１丁目付近",
+      notification:"通知オン",
+      lasttime:"１時間前",
+      avatar:avatar
+    };
+    console.log(this.props.avatar);
     // debugger
     return (
-      <div className="Card">
-        <div className="card-avatar">
-          <img src={this.data.avatar} alt=""/>
+      <div className={styles.Card}>
+        <div className={styles.avatar}>
+          <img src={this.props.avatar} alt=""/>
         </div>
-        <ul className="card-contents">
-          <li className="card-title">{this.data.title}</li>
-          <li className="card-location">{this.data.location}</li>
-          <li className="card-notification">{this.data.notification}</li>
+        <ul className={styles.contents}>
+          <li className={styles.cardTitle}>{this.props.title}</li>
+          <li className={styles.cardLocation}>{this.props.location}</li>
+          <li className={styles.cardNotification}>{this.props.notification}</li>
         </ul>
-        <p className="card-lasttime">{this.data.lasttime}</p>
+        <p className={styles.cardLasttime}>{this.props.lasttime}</p>
       </div>
     );
   }
